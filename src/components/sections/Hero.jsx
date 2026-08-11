@@ -96,9 +96,10 @@ export default function Hero() {
         position: 'relative',
         minHeight: '100vh',
         display: 'flex',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         overflow: 'hidden',
-        paddingTop: '5rem',
+        paddingTop: '5.5rem',
+        paddingBottom: '3rem',
         background: 'var(--color-bg)',
       }}
     >
@@ -141,10 +142,12 @@ export default function Hero() {
           width: '100%',
           margin: '0 auto',
           padding: '0 2rem',
+          /* Pass mouse events through to T-Rex iframe on the right */
+          pointerEvents: 'none',
         }}
       >
-        {/* Constrain text to roughly left 50% */}
-        <div style={{ maxWidth: '34rem' }}>
+        {/* Constrain text to roughly left 50% — re-enable pointer events here */}
+        <div style={{ maxWidth: '34rem', pointerEvents: 'auto' }}>
           <div data-anim style={{ marginBottom: '2rem' }}>
             <ServerStatus />
           </div>
