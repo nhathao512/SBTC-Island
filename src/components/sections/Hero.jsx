@@ -97,20 +97,22 @@ export default function Hero() {
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'flex-start',
-        overflow: 'hidden',
+        overflow: 'visible',
         paddingTop: '5.5rem',
         paddingBottom: '3rem',
         background: 'var(--color-bg)',
+        clipPath: 'inset(0 0 0 0)',  /* clip without hiding overflow */
       }}
     >
       {/* ── BACKGROUND: T-Rex (z-index 1, right side, full height) ── */}
       <div style={{
         position: 'absolute',
-        /* Right half of the hero, full height */
+        /* Right half of the hero, extend 60px beyond bottom so controls bar is hidden outside section */
         top: 0, right: 0,
-        width: '62%',
-        height: '100%',
+        width: '68%',
+        height: 'calc(100% + 60px)',
         zIndex: 1,
+        overflow: 'hidden',
       }}>
         <TrexScene />
       </div>

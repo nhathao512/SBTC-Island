@@ -1,6 +1,6 @@
 const EMBED_SRC =
   'https://sketchfab.com/models/96fba56efbc944e381b7d18d14357ed2/embed' +
-  '?autostart=1&ui_theme=dark&transparent=1&camera=0&ui_infos=0&ui_stop=0&annotation=0&dnt=1&preload=1'
+  '?autostart=1&ui_theme=dark&transparent=1&camera=0&ui_infos=0&ui_stop=0&ui_controls=0&ui_hint=0&annotation=0&dnt=1&preload=1'
 
 // Page background — overlays use same color to "erase" Sketchfab chrome
 const BG = '#050505'
@@ -27,8 +27,8 @@ export default function TrexScene() {
         allow="autoplay; fullscreen; xr-spatial-tracking"
         style={{
           position: 'absolute',
-          top: 0, left: 0,
-          width: '100%', height: '100%',
+          top: '-36px', left: 0,
+          width: '100%', height: 'calc(100% + 88px)',
           border: 'none',
           display: 'block',
         }}
