@@ -44,7 +44,7 @@ export default function Showcase() {
           <div className="text-label" style={{ marginBottom: '1rem' }}>SHOWCASE</div>
           <h2 className="text-section-title">
             INSIDE<br />
-            <span style={{ color: 'var(--color-accent)' }}>DINO5VN</span>
+            <span style={{ color: 'var(--color-accent)' }}>SBTC ISLAND</span>
           </h2>
         </div>
 
