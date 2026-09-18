@@ -127,8 +127,9 @@ export default function LauncherDownload() {
               {/* Download Button */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'flex-start' }}>
                 <a
-                  href={serverConfig.launcher}
-                  download="SBTC_Island_Launcher_Setup_v1.4.exe"
+                  href="https://drive.google.com/drive/folders/1gJuFWH28fXH2e8UF32q-z9e2eE2ZCOn0?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-primary"
                   data-cursor="button"
                   id="btn-download-launcher"
@@ -140,7 +141,7 @@ export default function LauncherDownload() {
                     fontSize: '1rem',
                   }}
                 >
-                  <Download size={18} />
+                  <Download size={18} strokeWidth={2.5} />
                   Tải Launcher v1.4 (.exe)
                 </a>
 

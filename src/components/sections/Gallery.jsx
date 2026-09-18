@@ -107,7 +107,7 @@ function Lightbox({ images, startIndex, onClose }) {
             letterSpacing: '0.2em',
           }}
         >
-          DINO5VN
+          SBTC ISLAND
         </div>
       </div>
 

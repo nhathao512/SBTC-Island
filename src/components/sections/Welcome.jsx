@@ -90,8 +90,8 @@ export default function Welcome() {
   }, [])
 
   const allTeam = [
-    ...serverConfig.streamers.map(s => ({ ...s, accentColor: 'rgba(255,45,120,0.15)', borderColor: 'rgba(255,45,120,0.25)' })),
-    ...serverConfig.admins.map(a => ({ ...a, accentColor: 'rgba(255,45,120,0.08)', borderColor: 'rgba(255,45,120,0.15)' })),
+    ...serverConfig.streamers,
+    ...serverConfig.admins,
   ]
 
   return (
@@ -187,31 +187,39 @@ export default function Welcome() {
             ref={teamRef}
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
               gap: '1px',
               background: '#1e1e1e',
+              border: '1px solid #1e1e1e',
             }}
           >
-            {allTeam.map(member => (
-              <div
-                key={member.name}
-                className="team-card"
-                style={{ background: member.accentColor }}
-              >
-                <div className="team-card__role">{member.role}</div>
-                <div className="team-card__name">{member.name}</div>
-                {member.handle && (
-                  <div style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: '0.72rem', color: 'var(--color-accent)',
-                    marginBottom: '0.5rem', opacity: 0.7,
-                  }}>
-                    @{member.handle}
-                  </div>
-                )}
-                <div className="team-card__desc">{member.desc}</div>
-              </div>
-            ))}
+            {allTeam.map((member, idx) => {
+              // Xen kẽ chuẩn 2 màu chính xác: 0.15 (hồng rượu) và 0.08 (đen trầm)
+              const bg = idx % 2 === 0
+                ? 'rgba(255, 45, 120, 0.15)'
+                : 'rgba(255, 45, 120, 0.08)'
+
+              return (
+                <div
+                  key={member.name}
+                  className="team-card"
+                  style={{ background: bg }}
+                >
+                  <div className="team-card__role">{member.role}</div>
+                  <div className="team-card__name">{member.name}</div>
+                  {member.handle && (
+                    <div style={{
+                      fontFamily: "'JetBrains Mono', monospace",
+                      fontSize: '0.72rem', color: 'var(--color-accent)',
+                      marginBottom: '0.5rem', opacity: 0.7,
+                    }}>
+                      @{member.handle}
+                    </div>
+                  )}
+                  <div className="team-card__desc">{member.desc}</div>
+                </div>
+              )
+            })}
           </div>
         </div>
 

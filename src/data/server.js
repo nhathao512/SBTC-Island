@@ -27,10 +27,15 @@ export const serverConfig = {
       role: 'Streamer',
       desc: 'Streamer chính — người dẫn đường cộng đồng SBTC',
     },
+    // {
+    //   name: 'SBTC Streamers',
+    //   role: 'Streamer',
+    //   desc: 'Toàn bộ các streamer thuộc team SBTC',
+    // },
     {
-      name: 'SBTC Streamers',
-      role: 'Streamer',
-      desc: 'Toàn bộ các streamer thuộc team SBTC',
+      name: 'Dung Omachi',
+      role: 'Content Creator',
+      desc: 'Top 1 Triceratops S19 — the best trike in Vietnam',
     },
   ],
 
@@ -53,6 +58,12 @@ export const serverConfig = {
       handle: 'ShinV',
       role: 'Admin & Coder',
       desc: 'Hỗ trợ — code khoảng 80% SBTC ISLAND',
+    },
+    {
+      name: 'Helper Số 1',
+      handle: 'wowzzxz',
+      role: 'Helper',
+      desc: 'Hỗ trợ — có thể nói role Helper sinh ra danh cho anh ấy',
     },
   ],
 }

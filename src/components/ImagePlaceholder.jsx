@@ -2,7 +2,7 @@
  * Dark image placeholder for when user's image files aren't yet added.
  * Use `src` prop with the expected path — if the image 404s, shows placeholder.
  */
-export default function ImagePlaceholder({ src, alt = '', className = '', style = {}, label = 'DINO5VN' }) {
+export default function ImagePlaceholder({ src, alt = '', className = '', style = {}, label = 'SBTC ISLAND' }) {
   const handleError = (e) => {
     // Hide the broken img and show the placeholder sibling
     e.currentTarget.style.display = 'none'
