@@ -63,7 +63,7 @@ export const serverConfig = {
       name: 'Helper Số 1',
       handle: 'wowzzxz',
       role: 'Helper',
-      desc: 'Hỗ trợ — có thể nói role Helper sinh ra danh cho anh ấy',
+      desc: 'Hỗ trợ — có thể nói role Helper sinh ra dành cho anh ấy',
     },
   ],
 }
